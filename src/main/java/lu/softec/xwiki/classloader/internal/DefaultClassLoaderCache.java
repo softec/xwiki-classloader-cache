@@ -23,6 +23,8 @@ package lu.softec.xwiki.classloader.internal;
 import java.net.URL;
 import java.net.URLStreamHandlerFactory;
 
+import javax.inject.Singleton;
+
 import org.xwiki.component.annotation.Component;
 import org.xwiki.component.phase.Initializable;
 import org.xwiki.component.phase.InitializationException;
@@ -37,6 +39,7 @@ import lu.softec.xwiki.classloader.ClassLoaderCache;
  * @see CachedURLClassLoaderFactory
  */
 @Component
+@Singleton
 public class DefaultClassLoaderCache implements ClassLoaderCache, Initializable {
     private CachedURLClassLoaderFactory cache;
 
